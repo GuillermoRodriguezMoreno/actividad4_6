@@ -1,4 +1,4 @@
-package domain;
+package org.iesvdm.actividad4_2a.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,13 +14,14 @@ import java.util.Set;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Pelicula {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private long id;
-    private String titulo;
-    @ManyToMany
-    private Set<Categoria> categorias = new HashSet<>();
+    private String nombre;
+    @ManyToMany(mappedBy = "categorias")
+    private Set<Pelicula> peliculas = new HashSet<>();
+
 }
