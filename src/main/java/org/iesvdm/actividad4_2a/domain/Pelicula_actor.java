@@ -7,23 +7,21 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Categoria {
+public class Pelicula_actor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private long id;
-    private String nombre;
+    @ManyToOne()
+    private Actor actor;
+    @ManyToOne
+    private Pelicula pelicula;
     private Date ultima_actualizacion;
-    @ManyToMany(mappedBy = "categorias")
-    private Set<Pelicula> peliculas = new HashSet<>();
-
 }

@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Categoria {
+public class Idioma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,8 @@ public class Categoria {
     private long id;
     private String nombre;
     private Date ultima_actualizacion;
-    @ManyToMany(mappedBy = "categorias")
-    private Set<Pelicula> peliculas = new HashSet<>();
-
+    @OneToMany(mappedBy = "idioma")
+    private Set<Pelicula> peliculas_idioma = new HashSet<>();
+    @OneToMany(mappedBy = "idioma_original")
+    private Set<Pelicula> peliculas_idioma_original = new HashSet<>();
 }
