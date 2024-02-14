@@ -1,10 +1,9 @@
 package org.iesvdm.actividad4_2a.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -22,8 +21,11 @@ public class Categoria {
     @EqualsAndHashCode.Include
     private long id;
     private String nombre;
+    @JsonFormat(pattern = "yyyy-MM-dd:HH:mm:ss")
     private Date ultima_actualizacion;
     @ManyToMany(mappedBy = "categorias")
+    @ToString.Exclude
+    @JsonIgnore
     private Set<Pelicula> peliculas = new HashSet<>();
 
 }

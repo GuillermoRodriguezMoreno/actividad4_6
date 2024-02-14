@@ -1,5 +1,6 @@
 package org.iesvdm.actividad4_2a.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,5 +24,6 @@ public class Pelicula_actor {
     private Actor actor;
     @ManyToOne
     private Pelicula pelicula;
+    @JsonFormat(pattern = "yyyy-MM-dd:HH:mm:ss")
     private Date ultima_actualizacion;
 }

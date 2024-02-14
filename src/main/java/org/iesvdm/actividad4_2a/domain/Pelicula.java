@@ -26,7 +26,12 @@ public class Pelicula {
     private Idioma idioma_original;
     @ManyToOne()
     private Idioma idioma;
-    @ManyToMany()
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "pelicula_categoria",
+            joinColumns = @JoinColumn(name = "pelicula_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "categoria_id", referencedColumnName = "id")
+    )
     private Set<Categoria> categorias = new HashSet<>();
     @OneToMany(mappedBy = "pelicula")
     private Set<Pelicula_actor> actores = new HashSet<>();
