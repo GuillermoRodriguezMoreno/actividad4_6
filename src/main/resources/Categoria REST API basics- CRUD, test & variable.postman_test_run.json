@@ -1,0 +1,168 @@
+{
+	"id": "a022ea84-d11c-4e3c-b152-c69d7efe6eb2",
+	"name": "Categoria REST API basics: CRUD, test & variable",
+	"timestamp": "2024-02-14T09:13:32.389Z",
+	"collection_id": "27979634-ac3ef667-0473-479f-9ff0-4cfc8f972243",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-02-14T09:13:31.824Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "2d28b723-2b88-490d-9685-8a27fb3b75e8",
+			"name": "GET all categorias",
+			"url": "http://localhost:8080/categoria",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ada683d3-4c10-4ed0-8ae6-aeb59da50072",
+			"name": "GET one categoria",
+			"url": "http://localhost:8080/categoria/3",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3b9559c6-f701-4786-929b-38b26e407830",
+			"name": "POST categoria",
+			"url": "http://localhost:8080/categoria",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "f924b821-ae00-46ef-9581-11d49912d186",
+			"name": "PUT updateOne categoria",
+			"url": "http://localhost:8080/categoria/8",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful PUT request": true
+			},
+			"testPassFailCounts": {
+				"Successful PUT request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Successful PUT request": true
+				}
+			]
+		},
+		{
+			"id": "7ca427c9-b9aa-4ad1-be18-36488bf0ca54",
+			"name": "DELETE one categoria",
+			"url": "http://localhost:8080/categoria/8",
+			"time": 6,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Successful DELETE request": true
+			},
+			"testPassFailCounts": {
+				"Successful DELETE request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Successful DELETE request": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 75,
+	"collection": {
+		"requests": [
+			{
+				"id": "2d28b723-2b88-490d-9685-8a27fb3b75e8",
+				"method": "GET"
+			},
+			{
+				"id": "ada683d3-4c10-4ed0-8ae6-aeb59da50072",
+				"method": "GET"
+			},
+			{
+				"id": "3b9559c6-f701-4786-929b-38b26e407830",
+				"method": "POST"
+			},
+			{
+				"id": "f924b821-ae00-46ef-9581-11d49912d186",
+				"method": "PUT"
+			},
+			{
+				"id": "7ca427c9-b9aa-4ad1-be18-36488bf0ca54",
+				"method": "DELETE"
+			}
+		]
+	}
+}

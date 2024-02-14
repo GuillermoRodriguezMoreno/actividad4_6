@@ -53,7 +53,16 @@ class Actividad42aApplicationTests {
     void crearCategoria() {
 
         Categoria categoria = new Categoria(0, "Drama", new Date(),  new HashSet<>());
+        Categoria categoria1 = new Categoria(0, "Musical", new Date(),  new HashSet<>());
+        Categoria categoria2 = new Categoria(0, "Policiaca", new Date(),  new HashSet<>());
+        Categoria categoria3 = new Categoria(0, "Terror", new Date(),  new HashSet<>());
+        Categoria categoria4 = new Categoria(0, "Comedia", new Date(),  new HashSet<>());
+
         categoriaRepository.save(categoria);
+        categoriaRepository.save(categoria1);
+        categoriaRepository.save(categoria2);
+        categoriaRepository.save(categoria3);
+        categoriaRepository.save(categoria4);
     }
 
     @Test
