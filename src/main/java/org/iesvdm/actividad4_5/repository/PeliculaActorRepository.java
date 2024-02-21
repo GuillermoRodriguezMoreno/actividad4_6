@@ -1,6 +1,6 @@
-package org.iesvdm.actividad4_2a.repository;
+package org.iesvdm.actividad4_5.repository;
 
-import org.iesvdm.actividad4_2a.domain.Pelicula_actor;
+import org.iesvdm.actividad4_5.domain.Pelicula_actor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

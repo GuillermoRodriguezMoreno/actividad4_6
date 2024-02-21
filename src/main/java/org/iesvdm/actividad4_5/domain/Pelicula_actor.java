@@ -1,31 +1,29 @@
-package org.iesvdm.actividad4_2a.domain;
+package org.iesvdm.actividad4_5.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Categoria {
+public class Pelicula_actor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private long id;
-    private String nombre;
+    @ManyToOne()
+    private Actor actor;
+    @ManyToOne
+    private Pelicula pelicula;
     @JsonFormat(pattern = "yyyy-MM-dd:HH:mm:ss")
     private Date ultima_actualizacion;
-    @ManyToMany(mappedBy = "categorias")
-    @ToString.Exclude
-    @JsonIgnore
-    private Set<Pelicula> peliculas = new HashSet<>();
-
 }

@@ -1,4 +1,4 @@
-package org.iesvdm.actividad4_2a.util;
+package org.iesvdm.actividad4_5.util;
 
 import jakarta.persistence.EntityManager;
 

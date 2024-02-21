@@ -1,10 +1,8 @@
-package org.iesvdm.actividad4_2a.domain;
+package org.iesvdm.actividad4_5.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
