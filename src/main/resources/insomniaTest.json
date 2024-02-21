@@ -1,0 +1,303 @@
+{
+   "_type":"export",
+   "__export_format":4,
+   "__export_date":"2024-02-21T19:28:31.470Z",
+   "__export_source":"insomnia.desktop.app:v8.6.1",
+   "resources":[
+      {
+         "_id":"req_f475efe353c44f73b56210afc31bf785",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708543620365,
+         "created":1708540827504,
+         "url":"localhost:8080/categoria",
+         "name":"findAllCategorias",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542935356,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "parentId":null,
+         "modified":1708540777996,
+         "created":1708540777996,
+         "name":"actividad4_5",
+         "description":"",
+         "scope":"collection",
+         "_type":"workspace"
+      },
+      {
+         "_id":"req_08dc461a0cf74290949a4172fa704302",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708543608740,
+         "created":1708542935256,
+         "url":"localhost:8080/categoria/count/1",
+         "name":"countPeliculas",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542935256,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"req_b1dfccb589614d7da8bd5545d85721fa",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708543631870,
+         "created":1708542239078,
+         "url":"localhost:8080/categoria?buscar=musical",
+         "name":"findByNombre",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542677233.5,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"req_aefbdf815ea542a4b439d8a66027196c",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708543638373,
+         "created":1708542048962,
+         "url":"localhost:8080/categoria?ordenar=asc",
+         "name":"findAllByNombreAsc",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542548222.25,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"req_494835ec04b94bd7892be45ff65a276d",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708543642798,
+         "created":1708542171556,
+         "url":"localhost:8080/categoria?ordenar=desc",
+         "name":"findAllByNombreDesc",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542483716.625,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"req_65c2b4815e7f479ca08ed17891b9f9f0",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708542470897,
+         "created":1708542419211,
+         "url":"localhost:8080/categoria?buscar=musical&ordenar=asc",
+         "name":"findByNombreAsc",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542419211,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"req_67dea1289e34416da1260a4ad631c266",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708542501618,
+         "created":1708542498304,
+         "url":"localhost:8080/categoria?buscar=musical&ordenar=desc",
+         "name":"findByNombreDesc",
+         "description":"",
+         "method":"GET",
+         "body":{
+            
+         },
+         "parameters":[
+            
+         ],
+         "headers":[
+            {
+               "name":"User-Agent",
+               "value":"insomnia/8.6.1"
+            }
+         ],
+         "authentication":{
+            
+         },
+         "metaSortKey":-1708542329144.5,
+         "isPrivate":false,
+         "pathParameters":[
+            
+         ],
+         "settingStoreCookies":true,
+         "settingSendCookies":true,
+         "settingDisableRenderRequestBody":false,
+         "settingEncodeUrl":true,
+         "settingRebuildPath":true,
+         "settingFollowRedirects":"global",
+         "_type":"request"
+      },
+      {
+         "_id":"env_f7363383dd7896b585ce49e654d6feb7b4e08b0e",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708540777998,
+         "created":1708540777998,
+         "name":"Base Environment",
+         "data":{
+            
+         },
+         "dataPropertyOrder":null,
+         "color":null,
+         "isPrivate":false,
+         "metaSortKey":1708540777998,
+         "_type":"environment"
+      },
+      {
+         "_id":"jar_f7363383dd7896b585ce49e654d6feb7b4e08b0e",
+         "parentId":"wrk_0fc22f8a838c4e8c9c675e86a134c9dc",
+         "modified":1708540777999,
+         "created":1708540777999,
+         "name":"Default Jar",
+         "cookies":[
+            
+         ],
+         "_type":"cookie_jar"
+      }
+   ]
+}

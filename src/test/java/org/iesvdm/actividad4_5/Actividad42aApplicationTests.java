@@ -36,12 +36,14 @@ class Actividad42aApplicationTests {
         Categoria categoria2 = new Categoria(0, "Policiaca", new Date(), new HashSet<>());
         Categoria categoria3 = new Categoria(0, "Terror", new Date(), new HashSet<>());
         Categoria categoria4 = new Categoria(0, "Comedia", new Date(), new HashSet<>());
+        Categoria categoria5 = new Categoria(0, "Drama-Musical", new Date(), new HashSet<>());
         // Guardo categorias
         categoriaRepository.save(categoria);
         categoriaRepository.save(categoria1);
         categoriaRepository.save(categoria2);
         categoriaRepository.save(categoria3);
         categoriaRepository.save(categoria4);
+        categoriaRepository.save(categoria5);
         // Creo peliculas
         Pelicula pelicula = new Pelicula(0, "El Padrino", "descripcion", null, null, new HashSet<>(), new HashSet<>());
         Pelicula pelicula1 = new Pelicula(0, "El Rey Leon", "descripcion", null, null, new HashSet<>(), new HashSet<>());

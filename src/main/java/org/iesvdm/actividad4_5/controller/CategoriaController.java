@@ -82,7 +82,7 @@ public class CategoriaController {
     }
     //Combinar filtros -> /categorias?buscar=<termino>&ordenar=asc|desc
     @GetMapping(value = {"", "/"}, params = {"buscar", "ordenar"})
-    public List<Categoria> findByNombreAsc(@RequestParam String buscar, @RequestParam String ordenar) {
+    public List<Categoria> findByNombreAscOrDesc(@RequestParam String buscar, @RequestParam String ordenar) {
         log.info("Buscando categoria con nombre: " + buscar + " y ordenando por: " + ordenar);
         if (ordenar.equals("asc")) {
             return this.categoriaService.findByNombreAsc(buscar);

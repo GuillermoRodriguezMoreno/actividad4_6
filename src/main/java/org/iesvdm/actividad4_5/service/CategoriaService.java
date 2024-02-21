@@ -49,7 +49,7 @@ public class CategoriaService {
 
     //Filtro buscar por termino -> ?buscar=<nombre>
     public List<Categoria> findByNombre(String nombre) {
-        return this.categoriaRepository.findByNombreContaining(nombre);
+        return this.categoriaRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
     //Filtro ordenar ascendente y descendente por nombre -> ?ordenar=asc|desc
@@ -63,10 +63,10 @@ public class CategoriaService {
 
     //Combinar filtros -> /categorias?buscar=<termino>&ordenar=asc|desc
     public List<Categoria> findByNombreAsc(String nombre) {
-        return this.categoriaRepository.findByNombreContainingOrderByNombreAsc(nombre);
+        return this.categoriaRepository.findByNombreContainingIgnoreCaseOrderByNombreAsc(nombre);
     }
 
     public List<Categoria> findByNombreDesc(String nombre) {
-        return this.categoriaRepository.findByNombreContainingOrderByNombreDesc(nombre);
+        return this.categoriaRepository.findByNombreContainingIgnoreCaseOrderByNombreDesc(nombre);
     }
 }
