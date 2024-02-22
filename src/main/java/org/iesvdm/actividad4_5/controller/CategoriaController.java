@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -92,4 +93,11 @@ public class CategoriaController {
             throw new IllegalArgumentException("El parametro ordenar solo puede ser 'asc' o 'desc'.");
         }
     }
+    /* ******* Buscar por Query dinamica ***************
+    @GetMapping(value = {"", "/"}, params = {"buscar", "ordenar"})
+    public List<Categoria> findByNombre(@RequestParam Optional<String> buscar, @RequestParam Optional<String> ordenar) {
+        log.info("Buscando categoria con nombre: " + buscar + " y ordenando por: " + ordenar);
+        return this.categoriaService.findByNombre(buscar, ordenar);
+    }
+     */
 }

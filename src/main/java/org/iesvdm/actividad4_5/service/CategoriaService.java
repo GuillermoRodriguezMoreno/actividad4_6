@@ -1,20 +1,24 @@
 package org.iesvdm.actividad4_5.service;
 
 import org.iesvdm.actividad4_5.domain.Categoria;
+import org.iesvdm.actividad4_5.repository.CategoriaCustomRepositoryImpl;
 import org.iesvdm.actividad4_5.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoriaService {
 
     // Repository
     private final CategoriaRepository categoriaRepository;
+    private final CategoriaCustomRepositoryImpl categoriaCustomRepository;
 
-    public CategoriaService(CategoriaRepository categoriaRepository) {
+    public CategoriaService(CategoriaRepository categoriaRepository, CategoriaCustomRepositoryImpl categoriaCustomRepository) {
         this.categoriaRepository = categoriaRepository;
+        this.categoriaCustomRepository = categoriaCustomRepository;
     }
 
     // CRUD
@@ -50,6 +54,10 @@ public class CategoriaService {
     //Filtro buscar por termino -> ?buscar=<nombre>
     public List<Categoria> findByNombre(String nombre) {
         return this.categoriaRepository.findByNombreContainingIgnoreCase(nombre);
+    }
+
+    public List<Categoria> findByNombre(Optional<String> buscar, Optional<String> ordenar) {
+        return this.categoriaCustomRepository.buscarCategoriaOrdenada(buscar, ordenar);
     }
 
     //Filtro ordenar ascendente y descendente por nombre -> ?ordenar=asc|desc
