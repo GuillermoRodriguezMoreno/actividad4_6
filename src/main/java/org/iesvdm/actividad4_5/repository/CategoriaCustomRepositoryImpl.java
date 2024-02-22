@@ -23,9 +23,9 @@ public class CategoriaCustomRepositoryImpl implements ICustomQuery {
             queryBuilder.append(" WHERE c.nombre LIKE :nombre");
         }
         if (ordenar.isPresent()) {
-            if (buscar.isPresent() && ordenar.get().equals("asc")) {
+            if (buscar.isPresent() && ordenar.get().equalsIgnoreCase("asc")) {
                 queryBuilder.append(" ORDER BY c.nombre ASC");
-            } else if (buscar.isPresent() && ordenar.get().equals("desc")) {
+            } else if (buscar.isPresent() && ordenar.get().equalsIgnoreCase("desc")) {
                 queryBuilder.append(" ORDER BY c.nombre DESC");
             }
         }

@@ -5,10 +5,14 @@ import org.iesvdm.actividad4_5.domain.Categoria;
 import org.iesvdm.actividad4_5.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+
+import static org.springframework.http.ResponseEntity.ok;
 
 @Slf4j
 @RestController
@@ -23,10 +27,19 @@ public class CategoriaController {
     }
 
     // CRUD
-    @GetMapping(value = {"", "/"}, params = {"!buscar", "!ordenar"})
+    @GetMapping(value = {"", "/"}, params = {"!buscar", "!ordenar", "!pagina", "!tamanio"})
     public List<Categoria> all() {
         log.info("Accediendo a todas las categorias.");
         return this.categoriaService.all();
+    }
+
+    // Paginacion
+    @GetMapping(value = {"", "/"}, params = {"!buscar", "!ordenar", "pagina", "tamanio"})
+    public ResponseEntity<Map<String, Object>> allPaginated(@RequestParam (value = "pagina", defaultValue = "0") int pagina,
+                                                            @RequestParam (value = "tamanio", defaultValue = "3") int tamanio) {
+        log.info("Accediendo a todas las categorias paginadas.");
+        Map<String, Object> responseAll = this.categoriaService.all(pagina, tamanio);
+        return ResponseEntity.ok( responseAll);
     }
 
     @PostMapping({"", "/"})
