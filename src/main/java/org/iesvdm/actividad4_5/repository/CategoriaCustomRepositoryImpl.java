@@ -29,7 +29,7 @@ public class CategoriaCustomRepositoryImpl implements ICustomQuery {
                 queryBuilder.append(" ORDER BY c.nombre DESC");
             }
         }
-        Query query = em.createQuery(queryBuilder.toString());
+        Query query = em.createQuery(queryBuilder.toString(), Categoria.class);
         if (buscar.isPresent()) {
             query.setParameter("nombre", "%" + buscar.get() + "%");
         }
