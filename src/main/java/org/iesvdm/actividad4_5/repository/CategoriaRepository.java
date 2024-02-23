@@ -23,7 +23,7 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     public List<CategoriaDTO> findAllByIdAndAndPeliculasCount();
     // Filtro buscar por termino -> ?buscar=<nombre>
     public List<Categoria> findByNombreContainingIgnoreCase(String nombre);
-
+    //
     // Filtro ordenar ascendente y descendente por nombre -> ?ordenar=asc|desc
     public List<Categoria> findAllByOrderByNombreAsc();
     public List<Categoria> findAllByOrderByNombreDesc();
