@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class CategoriaCustomRepositoryImpl implements ICustomQuery {
+public class CategoriaCustomRepositoryImpl implements ICustomQueryCategoria {
 
     @Autowired
     private EntityManager em;

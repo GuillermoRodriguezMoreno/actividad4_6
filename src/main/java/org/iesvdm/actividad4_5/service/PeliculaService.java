@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.iesvdm.actividad4_5.domain.Pelicula;
+import org.iesvdm.actividad4_5.repository.ICustomQueryPelicula;
 import org.iesvdm.actividad4_5.repository.PeliculaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,8 @@ public class PeliculaService {
 
     @Autowired
     private PeliculaRepository peliculaRepository;
+    @Autowired
+    private ICustomQueryPelicula customQueryPelicula;
     @PersistenceContext
     EntityManager entityManager;
 
@@ -23,6 +26,9 @@ public class PeliculaService {
         return this.peliculaRepository.findAll();
     }
 
+    public List<Pelicula> findAllPeliculasOrdenadas(String[] orden) {
+        return this.customQueryPelicula.findAllPeliculasOrdenadas(orden);
+    }
 
     @Transactional
     public Pelicula save(Pelicula pelicula) {
