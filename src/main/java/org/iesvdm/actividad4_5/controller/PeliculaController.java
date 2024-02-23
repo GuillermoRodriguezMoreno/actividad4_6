@@ -5,10 +5,12 @@ import org.iesvdm.actividad4_5.domain.Categoria;
 import org.iesvdm.actividad4_5.domain.Pelicula;
 import org.iesvdm.actividad4_5.service.PeliculaService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -28,7 +30,12 @@ public class PeliculaController {
     }
 
     // Paginacion con multiples parametros
-
+    @GetMapping(value = {"", "/"}, params = {"!orden", "pagina"})
+    public ResponseEntity<Map<String, Object>> allPaginated(@RequestParam String[] pagina) {
+        log.info("Accediendo a todas las películas paginadas.");
+        Map<String, Object> responseAll = this.peliculaService.all(pagina);
+        return ResponseEntity.ok( responseAll);
+    }
 
     // All peliculas ordenadas por multimples parametros
     @GetMapping(value = {"", "/"}, params = {"orden"})
