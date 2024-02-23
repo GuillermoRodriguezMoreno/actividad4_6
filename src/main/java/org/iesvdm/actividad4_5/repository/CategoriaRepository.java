@@ -1,6 +1,7 @@
 package org.iesvdm.actividad4_5.repository;
 
 import org.iesvdm.actividad4_5.domain.Categoria;
+import org.iesvdm.actividad4_5.dto.CategoriaDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,6 +18,9 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     @Query("SELECT COUNT(p) FROM Categoria c JOIN c.peliculas p WHERE c.id = :categoriaId")
     long countPeliculasById(@Param("categoriaId") long categoriaId);
 
+    // Aplicacion Query con DTO
+    @Query("SELECT new org.iesvdm.actividad4_5.dto.CategoriaDTO(C, (SELECT COUNT(p) FROM Categoria c JOIN c.peliculas p WHERE c.id = C.id)) from Categoria C")
+    public List<CategoriaDTO> findAllByIdAndAndPeliculasCount();
     // Filtro buscar por termino -> ?buscar=<nombre>
     public List<Categoria> findByNombreContainingIgnoreCase(String nombre);
 

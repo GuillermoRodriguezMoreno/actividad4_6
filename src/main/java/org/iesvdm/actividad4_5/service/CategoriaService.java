@@ -2,6 +2,7 @@ package org.iesvdm.actividad4_5.service;
 
 import org.iesvdm.actividad4_5.domain.Categoria;
 import org.iesvdm.actividad4_5.domain.Pelicula;
+import org.iesvdm.actividad4_5.dto.CategoriaDTO;
 import org.iesvdm.actividad4_5.repository.CategoriaCustomRepositoryImpl;
 import org.iesvdm.actividad4_5.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,6 +72,11 @@ public class CategoriaService {
     //Conteo de peliculas por categoria
     public long countPeliculas(long id) {
         return this.categoriaRepository.countPeliculasById(id);
+    }
+
+    // Todas las categorias con conteo de peliculas
+    public List<CategoriaDTO> findAllByIdAndAndPeliculasCount() {
+        return this.categoriaRepository.findAllByIdAndAndPeliculasCount();
     }
 
     //Filtro buscar por termino -> ?buscar=<nombre>

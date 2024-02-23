@@ -10,9 +10,9 @@ import org.iesvdm.actividad4_5.domain.Categoria;
 @NoArgsConstructor
 public class CategoriaDTO extends Categoria{
 
-    private int conteo;
+    private long conteo;
 
-    public CategoriaDTO(Categoria categoria, int conteo){
+    public CategoriaDTO(Categoria categoria, long conteo){
         super(categoria.getId(), categoria.getNombre(), categoria.getUltima_actualizacion(), categoria.getPeliculas());
         this.conteo = conteo;
     }

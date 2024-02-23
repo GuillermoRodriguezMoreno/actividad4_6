@@ -2,6 +2,7 @@ package org.iesvdm.actividad4_5.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.iesvdm.actividad4_5.domain.Categoria;
+import org.iesvdm.actividad4_5.dto.CategoriaDTO;
 import org.iesvdm.actividad4_5.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,14 @@ public class CategoriaController {
     public List<Categoria> all() {
         log.info("Accediendo a todas las categorias.");
         return this.categoriaService.all();
+    }
+
+    // All categorias con conteo de peliculas
+
+    @GetMapping(value = "/count")
+    public List<CategoriaDTO> allandPeliculasCount() {
+        log.info("Accediendo a todas las categorias.");
+        return this.categoriaService.findAllByIdAndAndPeliculasCount();
     }
 
     // Paginacion
